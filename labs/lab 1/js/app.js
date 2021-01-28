@@ -30,5 +30,16 @@ function setup() {
     fill(83, 127, 230);
     rect(0, 750, 1000, 1000);
 
+    
+    stroke(38, 41, 237); 
+    strokeWeight(10);
+    point(250, 250);
+    point(200, 250); 
+
+    noFill();
+    arc(250, 300, 150, 25, HALF_PI, PI);
+
+
+
 
 }
