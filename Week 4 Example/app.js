@@ -1,4 +1,4 @@
-//let colors = ["#75cfb8", "#91091e", "#bbdfc8", "#f0e5d8"];
+let colors = ["#75cfb8", "#91091e", "#bbdfc8", "#f0e5d8"];
 
 let positions = [0,0,0,0];
 
