@@ -6,14 +6,14 @@ function setup(){
   drawSun("#f2e874" , 20, 40);
 }
 
-function draw(){
+function draw(){    
   background(100);
   sunX ++;
   drawSun("#77d7f7" , 30, mouseY - 10, mouseX - 10);
 
   drawSun("#f2e874" , 30, mouseY, mouseX);
 
-}
+}                 
 function drawSun (sunColor, numRays, yHeight, xHeight){
 
   fill(sunColor);
