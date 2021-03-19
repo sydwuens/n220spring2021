@@ -15,7 +15,7 @@ var myCircle = {
   
   function draw(){
     myCircle.update();
-    if (keyIsDown(RIGHT_ARROW)) {
+    if (mouseIsPressed) {
         myCircle.x += 2;
       }
 
