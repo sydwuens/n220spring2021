@@ -1,28 +1,32 @@
-// draw 10 circles 
-var circles = [
-  { x: 130, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
-  { x: 100, y: 20, r: 10},
+// let myGuitar = {
+ //   make : "luna",
+ //   strings : "steel",
+ //   loudness: 10,
+ //   acoustic: true,
+ // }
 
-];
+ // console.log("StartLoudness:" + myGuitar.loudness);
 
-// create canvas
+ // myGuitar.loudness = myGuitar.loudness - 1;
+
+ // console.log("CurrentLoudness:" +myGuitar.loudness);
+
+ var myCircle = {
+  r: 15,
+  x: 20,
+  y: 30,
+  color: [123, 142, 219],
+  update: function(){
+    fill(this.color);
+    this.x += 2;
+    circle( this.x, this.y, this.r);
+  }
+}
+
 function setup(){
   createCanvas(400,300);
 }
 
-// animate circles down
-function draw(){
-  for( var i = 0; i < circles.length; i++){
-    let currentCircle = circles[i]
-    circle(circles[i].x, circles[i].y, circles[i].r);
-    currentCircle.y += 2;
-  }
+function draw() {
+  myCircle.update();
 }
