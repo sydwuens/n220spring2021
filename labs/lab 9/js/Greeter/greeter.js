@@ -7,5 +7,5 @@ function greetUser(){
 
   let greetMe = (helloUser);
 
-  dvResult.innerHTML = greetMe;
+  dvResult.innerHTML = "Hello " + greetMe;
 }
