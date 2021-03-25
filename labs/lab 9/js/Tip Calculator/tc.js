@@ -3,16 +3,19 @@ let txtCost = document.getElementById("txtCost");
 let dvResult = document.getElementById("dvResult");
 
 function calcTotal(){
-    let customerBill = (txtCost.value);
 
-    let totalTip = 0.2 * (customerBill);
+    //user cost input
+    let customerBill = Number(txtCost.value);
 
-    let finalTotal = "Total: $" + (totalTip) + (customerBill);
+    // calculation from user tip
+    let totalTip = (0.21 * (customerBill));
 
-  
-    
+    //combine tip and total
+    let finalTotal = ((totalTip) + (customerBill));
 
-    dvResult.innerHTML = totalTip;
+    //output tip result to user
+    dvResult.innerHTML = "Tip: $" + totalTip;
 
-    dvResultTwo.innerHTML = finalTotal;
+    //output total cost result to user
+    dvResultTwo.innerHTML = "Total: $" + finalTotal;
 }
