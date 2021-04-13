@@ -1,5 +1,3 @@
-let txtExample = document.getElementById("txtExample");
-
 let dvFound = document.getElementById("dvFound");
 
 let objects = [
@@ -12,12 +10,14 @@ let objects = [
    
    ];
 
-   function displayDivs(){
-
     for(var i = 0; i < objects.length; i++) {
       let newEl = document.createElement("div");
-      newEl.innerHTML += "Color: " + objects[i].color + " Height: " +  objects[i].height + " Width: " + objects[i].width;
+      //handles color
+      newEl.style.backgroundColor = objects[i].color;
+
+      newEl.style.height = objects[i].height + "px";
+      newEl.style.width = objects[i].width + "px";
+
       dvFound.appendChild(newEl);
     }
-}
    
