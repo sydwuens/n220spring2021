@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Mixer</title>
+    <style>
+        .canvas{
+            width: 300px;
+            height: 150px;
+            background-color: rgb(0,0, 0);
+            margin: 10px;
+        }
+
+        #dvCurrentColor{
+            width: 400px;
+            height: 30px;
+            background-color: #c7c9c8;
+            margin: 10px;
+        
+        }
+    </style>
 </head>
 <body>
 
+    <div id= "dvCanvas" class = canvas></div>
+    <div id= "dvCurrentColor"> Current Color: rgb(0,0,0)</div>
+
+    <div id = "dvRed"> Red: </div>
+    <button onclick="addColor(event)" data-color ="red" data-value = "1">+1</button>
+    <button onclick="addColor(event)" data-color ="red" data-value = "5">+5</button>
+    <button onclick="addColor(event)" data-color ="red" data-value = "10">+10</button>
+
+    <br />
+
+    <div id = "dvGreen"> Green: </div>
+    <button onclick="addColor(event)" data-color ="green" data-value = "1">+1</button>
+    <button onclick="addColor(event)" data-color ="green" data-value = "5">+5</button>
+    <button onclick="addColor(event)" data-color ="green" data-value = "10">+10</button>
+
+    <br />
+
+    <div id = "dvBlue"> Blue: </div>
+    <button onclick="addColor(event)" data-color ="blue" data-value = "1">+1</button>
+    <button onclick="addColor(event)" data-color ="blue" data-value = "5">+5</button>
+    <button onclick="addColor(event)" data-color ="blue" data-value = "10">+10</button>
 
     <script src="mix.js"></script>
-
-
 </body>
 </html>

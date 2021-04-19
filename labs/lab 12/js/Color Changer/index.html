@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Changer</title>
+    <style>
+        .square{
+            width: 200px;
+            height: 200px;
+            background-color: #70706e;
+            margin: 5px;
+            float: left;
+        }
+    </style>
 </head>
 <body>
    
-    <div id = "mySquare" onclick="changeColor(event); changeColorTwo(event)" data-response="Neat"></div>
+    <div id = "dvSquareOne" class = square data-color = #ff0000></div>
 
+    <div id = "dvSquareTwo" class = square data-color = #15ff00></div>
+
+    <div id = "dvSquareThree" class = square data-color = #0800ff></div>
     
     <script src="change.js"></script>
 
