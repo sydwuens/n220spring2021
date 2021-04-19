@@ -43,6 +43,7 @@ function addColor(event){
         }
     }
 
+    //update colors on the page
     finalColor = "rgb(" + red +", " + green +", " + blue +")"
     currentColor.innerHTML = "Current Color: " + finalColor;
     canvas.style.backgroundColor = finalColor;
