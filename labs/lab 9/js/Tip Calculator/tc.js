@@ -5,7 +5,7 @@ let dvResult = document.getElementById("dvResult");
 function calcTotal(){
 
     //user cost input
-    let customerBill = Number(txtCost.value);
+    let customerBill = (Math.round(txtCost.value) * 100) / 100;
 
     // calculation from user tip
     let totalTip = (0.21 * (customerBill));

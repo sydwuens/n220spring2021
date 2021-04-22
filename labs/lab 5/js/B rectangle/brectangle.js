@@ -1,12 +1,12 @@
 let circleX = 40;
 let circleY = 80;
+
 velX= 5;
 velY= 5;
 
 function setup(){
     createCanvas(400,300);
     background(150);
-    collideRect (80, 40, 20, 30, 30, 50);
 }
 
 function draw(){
@@ -15,6 +15,7 @@ function draw(){
     stroke(100);
     circleX = circleX + velX;
     circleY = circleY + velY;
+
    
 for(var i = 0; i < 20; i++) {
   }
@@ -30,8 +31,8 @@ function collideRect(circleX, circleY, rectX, rectY, rectW, rectH) {
 
     var colliding = false;
 
-    if(circleX > rectX && circleX < rectX + rectW) {
-
+    if(circleX > rectX && circleX > rectX + rectW) {
+        
         if(circleY > rectY && circleY < rectY + rectH) {
 
               return true;

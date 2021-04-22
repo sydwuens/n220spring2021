@@ -1,4 +1,5 @@
-let positions = [10,10,10,10];
+let positions = [10,10,10,10,10,10,10,10,10,10];
+let positionsY = [10,10,10,10,10,10,10,10,10,10];
 
 function setup() {
     createCanvas(400,300);
@@ -14,8 +15,12 @@ function setup() {
         positions.push(mouseX);
         positions.shift();
 
+        positionsY.push(mouseY);
+        positionsY.shift();
+
+        
         for( var i = 0; i < positions.length; i++){
-            circle (positions[i], 150, 20);
+            circle (positions[i], positionsY[i], 20);
 
     }
 
