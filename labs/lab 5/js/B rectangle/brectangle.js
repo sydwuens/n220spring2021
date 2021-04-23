@@ -1,46 +1,42 @@
-let circleX = 40;
-let circleY = 80;
+var bx = 100;
+var by = 100;
+var rectangle = [50];
+let bvx = 2;
+let bvy = 2;
 
-velX= 5;
-velY= 5;
-
-function setup(){
-    createCanvas(400,300);
-    background(150);
+function setup() {
+ createCanvas(400,300);
 }
 
+//draw
 function draw(){
-    background(150);
-    fill(100);
-    stroke(100);
-    circleX = circleX + velX;
-    circleY = circleY + velY;
+  background(150);
 
-   
-for(var i = 0; i < 20; i++) {
-  }
+// the ball
+circle(bx,by,20);
 
-  circle(circleX, circleY ,20);
-  circleY++;
-  rect(150, 270, 100, 30);
+// annimate the ball and its velocity direction
+ bx += bvx;
+ by += bvy;
+
+// loop through the rectangles
+for( let i = 0; i < rectangle.length; i++){
   
+    // draw rectangle
+  rect(rectangle[i], 200, 250, 15);
+
+  //check if the ball is hitting it
+  if(colideRect( bx, by, rectangle[i], 200, 250, 15)){
+    //bounce ball off rectangle
+    bvy *= -1;
+  }
 }
-
-
-function collideRect(circleX, circleY, rectX, rectY, rectW, rectH) {
-
-    var colliding = false;
-
-    if(circleX > rectX && circleX > rectX + rectW) {
-        
-        if(circleY > rectY && circleY < rectY + rectH) {
-
-              return true;
-
-        }
-
-   }
-
-   return false;
-
+}
+function colideRect (px, py, rx, ry, rw, rh) {
+  if (px > rx && px < rx + rw) {
+    if ( py > ry && py < ry + rh){
+      return true;
+    }
+  }
+ return false;
 }
