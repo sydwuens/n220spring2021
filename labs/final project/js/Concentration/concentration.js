@@ -1,27 +1,32 @@
 // link js to html
 element.addEventListener("click", matchCard);
+element.addEventListener("click", checkMatch);
 
- // if else for if cards match, remove if not 
-
+ // decipher between click 1 and click 2
 function matchCard(event){
   
-  let response = event.target.getAttribute("data-number");
-  event.target.innerHTML = response;
+  let variableCard1 = event.target.getAttribute("data-cell-index");
 
-  for(let i = 0; i < response.length; i++){
-    if((response[i] == "2") && (response[i] == "2")){
-      event.target.innerHTML = response;
-    //remove cards when they match
+  let variableCard2 = event.target.getAttribute("data-cell-index");
+  
+  let response = event.target.getAttribute("data-cell-index")
+    event.target.innerHTML = response;
+}
+
+//compare the two clicks
+function checkMatch(event){
+    if(getdatacellindex.value == getdatacellindex.value){
+    //remove cards if they match
       event.target.remove();
     }
     else{
-      event.target.style.backgroundColor = "#42f5ef";
+      //setTimeout if they don't match
+      setTimeout(() => {
+      event.target.style.backgroundcolor = bisque;
+      
+    }, 500);
     }
- 
-}
+  }
 
-}
- 
- //set timeout
 
    
