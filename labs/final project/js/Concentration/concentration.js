@@ -22,7 +22,7 @@ function checkMatch(event){
     else{
       //setTimeout if they don't match
       setTimeout(() => {
-      event.target.style.backgroundcolor = bisque;
+
       
     }, 500);
     }
